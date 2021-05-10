@@ -23,7 +23,16 @@ namespace OOD_ExamPrep_2
 
         public Phone (string name, decimal price, string operatingSystem, string os_image ="", string phone_image = "")
         {
+            Name = name;
+            Price = price;
+            OperatingSystem = operatingSystem;
+            OS_Image = os_image;
+            Phone_Image = phone_image;
+        }
 
+        public override string ToString()
+        {
+            return Name;
         }
 
         public void IncreasePrice(double increase)
