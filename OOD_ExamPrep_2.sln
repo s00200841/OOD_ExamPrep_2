@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOD_ExamPrep_2", "OOD_ExamP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingProject", "TestingProject\TestingProject.csproj", "{EDDC97A8-F590-4C28-89B3-72F0F8E1EA49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManagement", "DataManagement\DataManagement.csproj", "{CEEC228E-EF11-488B-878D-AAB4B98CDFF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EDDC97A8-F590-4C28-89B3-72F0F8E1EA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDDC97A8-F590-4C28-89B3-72F0F8E1EA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDDC97A8-F590-4C28-89B3-72F0F8E1EA49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEEC228E-EF11-488B-878D-AAB4B98CDFF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEEC228E-EF11-488B-878D-AAB4B98CDFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEEC228E-EF11-488B-878D-AAB4B98CDFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEEC228E-EF11-488B-878D-AAB4B98CDFF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

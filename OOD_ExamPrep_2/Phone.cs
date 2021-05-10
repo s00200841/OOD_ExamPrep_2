@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace OOD_ExamPrep_2
     public class Phone
     {
 
-        public int ID { get; set; }
+        public int ID { get; set; } // PK
         public string Name { get; set; }
         public decimal Price { get; set; }
         public string OperatingSystem { get; set; }
@@ -39,5 +40,11 @@ namespace OOD_ExamPrep_2
         {
             Price *= (decimal)(increase + 1);
         }
+    }
+
+    public class PhoneData: DbContext
+    {
+        public PhoneData() : base("PhoneInformation") { } // Database name
+        public DbSet<Phone> Phones { get; set; } // Table Creation of phones
     }
 }
