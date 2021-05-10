@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOD_ExamPrep_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="listboxTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding OS_Image}"/>
+                <TextBlock Margin="5" Text="{Binding Name}" VerticalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        
+        <ListBox ItemTemplate="{StaticResource ResourceKey=listboxTemplate}" x:Name="lbx_Phones" HorizontalAlignment="Left" Height="241" VerticalAlignment="Top" Width="218" Margin="104,84,0,0" SelectionChanged="lbx_Phones_SelectionChanged"/>
+        <TextBox x:Name="tbx_PhoneDetails" HorizontalAlignment="Left" Height="38" Margin="471,84,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="222"/>
+        <Image x:Name="img_PhoneImage" HorizontalAlignment="Left" Height="186" Margin="471,139,0,0" VerticalAlignment="Top" Width="222"/>
+
     </Grid>
 </Window>

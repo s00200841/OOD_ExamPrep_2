@@ -20,9 +20,31 @@ namespace OOD_ExamPrep_2
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Phone> AllPhones;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            PhoneData db = new PhoneData();
+
+            var query = from p in db.Phones
+                        select p;
+            AllPhones = query.ToList();
+            lbx_Phones.ItemsSource = AllPhones;
+        }
+
+        private void lbx_Phones_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Phone selectedPhone = lbx_Phones.SelectedItem as Phone;
+
+            if(selectedPhone != null)
+            {
+                img_PhoneImage.Source = new BitmapImage(new Uri(selectedPhone.Phone_Image, UriKind.Relative));
+                tbx_PhoneDetails.Text = $"{selectedPhone.Price:C}";
+            }
         }
     }
 }
